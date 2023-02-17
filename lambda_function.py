@@ -77,3 +77,19 @@ print(result)
 
 result = list(select(lambda x: (x**2),result))
 print(result)
+
+# Решение через функцию map
+
+
+
+def where(f,col):
+    return[x for x in col if f(x)]
+
+list1 = [1,2,3,5,8,15,23,38]
+result = map(int,list1)
+print(result)
+result = where(lambda x : x % 2 == 0,result)
+print(result)
+
+result = list(map(lambda x: (x**2),result))
+print(result)
